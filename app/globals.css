@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100;300;400&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,11 +18,55 @@
 }
 
 body {
+  font-family: "Anton", sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* padding: 1rem; */
+}
+
+.font-montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  background: #ceaa85;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(164, 97, 21, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(80, 49, 6);
+  outline: 1px solid rgb(80, 49, 6);
+}
+
+.img-gradient {
+  position: relative;
+}
+.img-gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)); */
+  background: linear-gradient(rgba(254, 243, 199, 0.3), rgba(47, 18, 9, 0.3));
+  /* background: linear-gradient(rgba(254, 243, 199, 0.3), rgba(124, 45, 18, 0.3)); */
+}
+
+.img-gradient-dark {
+  position: relative;
+}
+.img-gradient-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  /* background: linear-gradient(rgba(254, 243, 199, 0.3), rgba(47, 18, 9, 0.3)); */
+  /* background: linear-gradient(rgba(254, 243, 199, 0.3), rgba(124, 45, 18, 0.3)); */
 }
